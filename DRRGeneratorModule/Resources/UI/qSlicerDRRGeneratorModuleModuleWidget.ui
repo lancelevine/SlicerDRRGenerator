@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>qSlicerDRRGeneratorModuleModuleWidget</class>
+  <widget class="QWidget" name="qSlicerDRRGeneratorModuleModuleWidget">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>525</width>
+        <height>319</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Form</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+        <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton" native="true">
+          <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+            </sizepolicy>
+          </property>
+          <property name="text" stdset="0">
+            <string>IO</string>
+          </property>
+          <layout class="QFormLayout" name="verticalLayout_3">
+            <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+            </property>
+            <property name="verticalSpacing">
+              <number>6</number>
+            </property>
+            <property name="margin">
+              <number>4</number>
+            </property>
+            <item row="0" column="0">
+              <widget class="QLabel" name="InputVolumeLabel">
+                <property name="text">
+                  <string>Input volume:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="0" column="1">
+              <widget class="qMRMLNodeComboBox" name="InputVolumeComboBox">
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="nodeTypes">
+                  <stringlist>
+                    <string>vtkMRMLScalarVolumeNode</string>
+                  </stringlist>
+                </property>
+                <property name="noneEnabled">
+                  <bool>false</bool>
+                </property>
+                <property name="addEnabled">
+                  <bool>false</bool>
+                </property>
+                <property name="renameEnabled">
+                  <bool>true</bool>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="qSlicerDRRGeneratorModuleFooBarWidget" name="FooBar" native="true"/>
+            </item>
+            <item row="1" column="0">
+              <widget class="QLabel" name="InputVolumeLabel">
+                <property name="text">
+                  <string>Output volume:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="1" column="1">
+              <widget class="qMRMLNodeComboBox" name="ProjectionComboBox">
+                <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                  </sizepolicy>
+                </property>
+                <property name="nodeTypes">
+                  <stringlist>
+                    <string>vtkMRMLScalarVolumeNode</string>
+                  </stringlist>
+                </property>
+                <property name="noneEnabled">
+                  <bool>false</bool>
+                </property>
+                <property name="addEnabled">
+                  <bool>true</bool>
+                </property>
+                <property name="renameEnabled">
+                  <bool>true</bool>
+                </property>
+                <property name="removeEnabled">
+                  <bool>false</bool>
+                </property>
+                <property name="selectNodeUponCreation">
+                  <bool>true</bool>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="qSlicerDRRGeneratorModuleFooBarWidget" name="FooBar" native="true"/>
+            </item>
+          </layout>
+        </widget>
+      </item>
+
+      <item>
+        <widget class="ctkCollapsibleButton" name="CTKCollapsibleButton_2" native="true">
+          <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+            </sizepolicy>
+          </property>
+          <property name="text" stdset="0">
+            <string>DRR Generator</string>
+          </property>
+          <layout class="QFormLayout" name="verticalLayout_4">
+            <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+            </property>
+            <property name="Spacing">
+              <number>6</number>
+            </property>
+            <property name="margin">
+              <number>4</number>
+            </property>
+            
+              <item row="0" column="0">
+                <widget class="QLabel">
+                  <property name="text">
+                    <string>Rotation:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                  <property name="margin">
+                    <number>0</number>
+                  </property>
+                  <property name="Spacing">
+                    <number>4</number>
+                  </property>
+                  <item>
+                    <widget class="QLabel">
+                      <property name="text">
+                        <string>X:</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="ctkDoubleSpinBox" name="rotationXSpinBox">
+                      <property name="enabled">
+                        <bool>true</bool>
+                      </property>
+                      <property name="sizePolicy">
+                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                          <horstretch>1</horstretch>
+                          <verstretch>0</verstretch>
+                        </sizepolicy>
+                      </property>
+                      <property name="minimum">
+                        <double>0</double>
+                      </property>
+                      <property name="maximum">
+                        <double>359</double>
+                      </property>
+                      <property name="value">
+                        <double>90.00</double>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QLabel">
+                      <property name="text">
+                        <string>Y:</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="ctkDoubleSpinBox" name="rotationYSpinBox">
+                      <property name="enabled">
+                        <bool>true</bool>
+                      </property>
+                      <property name="sizePolicy">
+                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                          <horstretch>1</horstretch>
+                          <verstretch>0</verstretch>
+                        </sizepolicy>
+                      </property>
+                      <property name="minimum">
+                        <double>0</double>
+                      </property>
+                      <property name="maximum">
+                        <double>359</double>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QLabel">
+                      <property name="text">
+                        <string>Z:</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="ctkDoubleSpinBox" name="rotationZSpinBox">
+                      <property name="enabled">
+                        <bool>true</bool>
+                      </property>
+                      <property name="sizePolicy">
+                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                          <horstretch>1</horstretch>
+                          <verstretch>0</verstretch>
+                        </sizepolicy>
+                      </property>
+                      <property name="minimum">
+                        <double>0</double>
+                      </property>
+                      <property name="maximum">
+                        <double>359</double>
+                      </property>
+                    </widget>
+                  </item>
+                </layout>    
+            </item>
+
+            <item row="1" column="0">
+              <widget class="QLabel">
+                <property name="text">
+                  <string>Translation:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="1" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="margin">
+                  <number>0</number>
+                </property>
+                <property name="Spacing">
+                  <number>4</number>
+                </property>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>X:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="translationXSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>1000</double>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Y:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="translationYSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>1000</double>
+                    </property>
+                    <property name="value">
+                      <double>200</double>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Z:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="translationZSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>1000</double>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </item>
+
+            <item row="2" column="0">
+              <widget class="QLabel">
+                <property name="text">
+                  <string>Center:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="2" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="margin">
+                  <number>0</number>
+                </property>
+                <property name="Spacing">
+                  <number>4</number>
+                </property>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>X:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="centerXSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>359</double>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Y:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="centerYSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>359</double>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Z:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="centerZSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>359</double>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </item>
+
+            <item row="3" column="0">
+              <widget class="QLabel">
+                <property name="text">
+                  <string>Parameters:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="3" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="margin">
+                  <number>0</number>
+                </property>
+                <property name="Spacing">
+                  <number>4</number>
+                </property>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Focal Point:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="focalPointSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>1000</double>
+                    </property>
+                    <property name="value">
+                      <double>400</double>
+                    </property>"
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Threshold:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="ctkDoubleSpinBox" name="thresholdSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>1000</double>
+                    </property>
+                    <property name="value">
+                      <double>0</double>
+                    </property>"
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Direction:</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QSpinBox" name="directionSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>2</double>
+                    </property>
+                    <property name="value">
+                      <double>2</double>
+                    </property>"
+                  </widget>
+                </item>
+              </layout>
+            </item>
+
+            <item row="4" column="0">
+              <widget class="QLabel">
+                <property name="text">
+                  <string>DRR Size:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="4" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="margin">
+                  <number>0</number>
+                </property>
+                <property name="Spacing">
+                  <number>4</number>
+                </property>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>X: </string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QSpinBox" name="sizeXSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>1000</double>
+                    </property>
+                    <property name="value">
+                      <double>512</double>
+                    </property>"
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QLabel">
+                    <property name="text">
+                      <string>Y: </string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QSpinBox" name="sizeYSpinBox">
+                    <property name="enabled">
+                      <bool>true</bool>
+                    </property>
+                    <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                        <horstretch>1</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimum">
+                      <double>0</double>
+                    </property>
+                    <property name="maximum">
+                      <double>1000</double>
+                    </property>
+                    <property name="value">
+                      <double>494</double>
+                    </property>"
+                  </widget>
+                </item>
+              </layout>
+            </item>
+            
+          </layout>
+        </widget>
+      </item>
+      
+      <item>
+        <widget class="QPushButton" name="GenerateDRRButton">
+          <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+            </sizepolicy>
+          </property>
+          <property name="text">
+            <string>Generate DRR</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <spacer name="verticalSpacer">
+          <property name="orientation">
+            <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+            <size>
+              <width>0</width>
+              <height>0</height>
+            </size>
+          </property>
+        </spacer>
+      </item>
+    </layout>
+  </widget>
+  <customwidgets>
+    <customwidget>
+      <class>qSlicerWidget</class>
+      <extends>QWidget</extends>
+      <header>qSlicerWidget.h</header>
+      <container>1</container>
+    </customwidget>
+    <customwidget>
+      <class>ctkCollapsibleButton</class>
+      <extends>QWidget</extends>
+      <header>ctkCollapsibleButton.h</header>
+      <container>1</container>
+    </customwidget>
+    <customwidget>
+      <class>ctkDoubleSpinBox</class>
+      <extends>QWidget</extends>
+      <header>ctkDoubleSpinBox.h</header>
+    </customwidget>
+    <customwidget>
+      <class>qSlicerDRRGeneratorModuleFooBarWidget</class>
+      <extends>QWidget</extends>
+      <header>qSlicerDRRGeneratorModuleFooBarWidget.h</header>
+      <container>1</container>
+    </customwidget>
+  </customwidgets>
+  <resources/>
+  <connections>
+    <connection>
+      <sender>qSlicerDRRGeneratorModuleModuleWidget</sender>
+      <signal>mrmlSceneChanged(vtkMRMLScene*)</signal>
+      <receiver>InputVolumeComboBox</receiver>
+      <slot>setMRMLScene(vtkMRMLScene*)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>245</x>
+          <y>4</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>279</x>
+          <y>103</y>
+        </hint>
+      </hints>
+    </connection>
+    <connection>
+      <sender>qSlicerDRRGeneratorModuleModuleWidget</sender>
+      <signal>mrmlSceneChanged(vtkMRMLScene*)</signal>
+      <receiver>ProjectionComboBox</receiver>
+      <slot>setMRMLScene(vtkMRMLScene*)</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>245</x>
+          <y>4</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>279</x>
+          <y>103</y>
+        </hint>
+      </hints>
+    </connection>
+  </connections>
+</ui>
