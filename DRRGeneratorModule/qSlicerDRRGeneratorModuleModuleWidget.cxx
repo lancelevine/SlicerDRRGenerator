@@ -226,7 +226,7 @@ void qSlicerDRRGeneratorModuleModuleWidget::setInputVolume(vtkMRMLNode* volumeNo
 	qDebug() << "function::setInputVolume";
 
 	//qvtkReconnect(d->InputVolumeNode, volumeNode, vtkCommand::ModifiedEvent, this, SLOT(updateVolumeInfo()));
-	d->InputVolumeNode = volumeNode;
+	d->InputVolumeNode = vtkMRMLVolumeNode::SafeDownCast(volumeNode);
 	//qDebug() << volumeNode->GetID();
 }
 
@@ -237,7 +237,7 @@ void qSlicerDRRGeneratorModuleModuleWidget::setOutputVolume(vtkMRMLNode* volumeN
 	qDebug() << "function::setOutputVolume";
 
 	//qvtkReconnect(d->InputVolumeNode, volumeNode, vtkCommand::ModifiedEvent, this, SLOT(updateVolumeInfo()));
-	d->OutputVolumeNode = volumeNode;
+	d->OutputVolumeNode = vtkMRMLVolumeNode::SafeDownCast(volumeNode);
 	//qDebug() << volumeNode->GetID();
 }
 
